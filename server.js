@@ -16,18 +16,19 @@ const allowedOrigins= ['http://localhost:5173']
 app.use(express.json());
 app.use(cors({
   origin: allowedOrigins,
-  credentials: true
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE']
 }));
 
 // Routes
-app.use('/api/user', userRouter)
-
 app.get('/', (req, res)=> {
     res.json({
         success: true,
         message: 'server runnng!'
     })
 })
+
+app.use('/api/user', userRouter)
 
 // test server
 const PORT= process.env.PORT || 8080;
