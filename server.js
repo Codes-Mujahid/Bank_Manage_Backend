@@ -22,10 +22,10 @@ app.use(cors({
 
 // Routes
 app.get('/', (req, res)=> {
-    res.json({
-        success: true,
-        message: 'server runnng!'
-    })
+  res.json({
+    success:true,
+    message: 'API working...'
+  })
 })
 
 app.use('/api/user', userRouter)
