@@ -9,7 +9,7 @@ await connectDB()
 const app= express()
 
 //frontend-origins
-const allowedOrigins= ['http://localhost:5173']
+const allowedOrigins= ['https://bank-manage-frontend.vercel.app']
 
 
 // middlewares
